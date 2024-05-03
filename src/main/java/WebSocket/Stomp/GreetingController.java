@@ -11,6 +11,6 @@ public class GreetingController {
     @MessageMapping("/hello")
     @SendTo("/topic/greetings")
     public Greeting greeting(@Payload Message message){
-        return new Greeting("Hello " + HtmlUtils.htmlEscape(message.name()) + "!");
+        return new Greeting("Hello " + message.name() + "!");
     }
 }

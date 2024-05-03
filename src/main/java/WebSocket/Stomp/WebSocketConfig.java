@@ -18,6 +18,6 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry){
         registry.addEndpoint("/spring-stomp").setAllowedOrigins("*");
-        registry.addEndpoint("/spring-stomp").withSockJS();
+        registry.addEndpoint("/spring-stomp").setAllowedOrigins("*").withSockJS();
     }
 }
